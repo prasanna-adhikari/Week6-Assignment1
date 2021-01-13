@@ -1,22 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".ui.addStudent.AddStudentFragment">
-
     <TextView
-        android:id="@+id/text_dashboard"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:gravity="center_horizontal" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:gravity="center"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:textColor="#25283E"
+        android:text="Student Details"
+        />
+    <EditText
+        android:id="@+id/etName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="10dp"
+        android:hint="Full name"
+        android:textColor="#252525"
+        android:layout_marginRight="10dp"/>
+    <EditText
+        android:id="@+id/etAge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:hint="Age"
+        android:textColor="#252525"
+        android:layout_marginRight="10dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:textSize="18dp"
+        android:text="Gender"
+        android:textColor="@color/black"/>
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+        <RadioButton
+            android:id="@+id/rdMale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:text="Male"
+            />
+        <RadioButton
+            android:id="@+id/rdFemale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:text="Female"
+            />
+        <RadioButton
+            android:id="@+id/rdOther"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:text="Other"
+            />
+    </RadioGroup>
+    <EditText
+        android:id="@+id/etAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:hint="Address"
+        android:textColor="#252525"
+        android:layout_marginRight="10dp"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="Add Student"
+        />
+
+<!--    <TextView-->
+<!--        android:id="@+id/text_dashboard"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="8dp"-->
+<!--        android:layout_marginTop="8dp"-->
+<!--        android:layout_marginEnd="8dp"-->
+<!--        android:textSize="20sp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        android:gravity="center_horizontal" />-->
+</LinearLayout>
