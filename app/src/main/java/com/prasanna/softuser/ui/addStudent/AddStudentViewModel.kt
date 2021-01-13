@@ -1,13 +1,13 @@
-package com.prasanna.softuser.ui.notifications
+package com.prasanna.softuser.ui.addStudent
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class NotificationsViewModel : ViewModel() {
+class AddStudentViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "This is notifications Fragment"
+        value = "This is add student Fragment"
     }
     val text: LiveData<String> = _text
 }
