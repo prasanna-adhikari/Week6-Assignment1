@@ -44,7 +44,6 @@
         android:textColor="@color/white"
         android:background="#0040FF"
         android:textSize="18sp"
-
         android:text="Login"/>
 
 </LinearLayout>

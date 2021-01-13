@@ -7,6 +7,7 @@ import android.renderscript.ScriptGroup
 import android.text.TextUtils
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Toast
 
 class LoginActivity : AppCompatActivity() {
     private lateinit var etUsername:EditText
@@ -16,20 +17,22 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
         Binding()
-        validate()
 
         btnLogin.setOnClickListener {
             if (validate()){
-                Intent(this,MainActivity::class.java).also{
-                    startActivity(it)
+                val username = etUsername.text.toString().trim()
+                val password = etPassword.text.toString().trim()
+                if (username=="softwarica" && password=="coventry"){
+                    Intent(this,MainActivity::class.java).also{
+                        startActivity(it)
+                    }
+                    return@setOnClickListener
+                }else{
+                    Toast.makeText(this, "Invalid Username or password", Toast.LENGTH_SHORT).show()
                 }
-                return@setOnClickListener
             }
             clear()
-
         }
-
-
     }
     private fun Binding(){
         etUsername=findViewById(R.id.etUsername)
