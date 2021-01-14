@@ -4,6 +4,8 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.webkit.WebView
+import android.webkit.WebViewClient
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
@@ -13,7 +15,7 @@ import com.prasanna.softuser.R
 class AboutFragment : Fragment() {
 
     private lateinit var aboutViewModel: AboutViewModel
-
+    private lateinit var softwarica: WebView
     override fun onCreateView(
             inflater: LayoutInflater,
             container: ViewGroup?,
@@ -22,10 +24,14 @@ class AboutFragment : Fragment() {
         aboutViewModel =
                 ViewModelProvider(this).get(AboutViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_about, container, false)
-        val textView: TextView = root.findViewById(R.id.text_notifications)
         aboutViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
+
         })
+
+        // bing
+        softwarica = root.findViewById(R.id.softwarica)
+        softwarica.webViewClient = WebViewClient()
+        softwarica.loadUrl("https://softwarica.edu.np/")
         return root
     }
 }

@@ -6,7 +6,10 @@ object DataStore {
     val student = mutableListOf<StudentPost>(
             StudentPost(
                     "Ram",
-                    30, "male", "Dillibazar"
+                    30,
+                "Male",
+                "Dillibazar",
+                "https://bulletinhours.com/wp-content/uploads/2020/04/Chris-Hemsworth.jpg"
             )
     )
 //    val posts = mutableListOf<Post>()

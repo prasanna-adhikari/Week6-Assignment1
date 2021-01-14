@@ -45,6 +45,7 @@
         android:text="Gender"
         android:textColor="@color/black"/>
     <RadioGroup
+        android:id="@+id/rgGender"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
@@ -79,6 +80,16 @@
         android:layout_marginTop="10dp"
         android:layout_marginLeft="10dp"
         android:hint="Address"
+        android:textColor="#252525"
+        android:layout_marginRight="10dp"/>
+    <EditText
+        android:id="@+id/etImageLink"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:hint="Image Link"
         android:textColor="#252525"
         android:layout_marginRight="10dp"/>
     <Button
